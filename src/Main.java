@@ -1,17 +1,31 @@
 public class Main {
     public static void main(String[] args) {
-        Author authors = new Author("Philip", "Dick");
-        System.out.println("authors.getName() = " + authors.getName());
-        System.out.println("authors.getSurname() = " + authors.getSurname());
-
-
-        Book theFirstBook = new Book("Ubik", authors
-                /*Не понимаю, как указать точно Ф.И., вместо ссылки на них.*/
-                , 1968);
+        System.out.println();
+// Authors
+        Author dick = new Author("Philip", "Dick");
+        Author darwin = new Author("Charles", "Darwin");
+//
+// The First Book
+        Book theFirstBook = new Book("Ubik", dick, 1968);
         System.out.println("theFirstBook.getTitle() = " + theFirstBook.getTitle());
-        System.out.println("theFirstBook.getAuthor() = " + theFirstBook.getAuthor());
+        System.out.println("theFirstBook.getAuthor() = "
+                + theFirstBook.getAuthor().getName()
+                + " "
+                + theFirstBook.getAuthor().getSurname());
         theFirstBook.setDateOfPublication(1969);
         System.out.println("theFirstBook.getDateOfPublication() = " +
                 theFirstBook.getDateOfPublication());
+        System.out.println();
+//
+// The Second Book
+        Book theSecondBook = new Book("On the Origin of Species",
+                darwin, 1859);
+        System.out.println("theSecondBook.getTitle() = " + theSecondBook.getTitle());
+        System.out.println("theSecondBook.getAuthor() = "
+                + theSecondBook.getAuthor().getName()
+                + " "
+                + theSecondBook.getAuthor().getSurname());
+        System.out.println("theSecondBook.getDateOfPublication() = " +
+                theSecondBook.getDateOfPublication());
     }
 }
