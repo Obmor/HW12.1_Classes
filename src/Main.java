@@ -3,15 +3,16 @@ public class Main {
         System.out.println();
 // Authors
         Author dick = new Author("Philip", "Dick");
-        Author darwin = new Author("Charles", "Darwin");
+        Author darwin = new Author("Philip", "Darwin");
+        /* В 6й строке имя скопированно из 5й строки для проверки соответствия через
+         метода EQUALS.
+         */
 //
 // The First Book
         Book theFirstBook = new Book("Ubik", dick, 1968);
         System.out.println("theFirstBook.getTitle() = " + theFirstBook.getTitle());
-        System.out.println("theFirstBook.getAuthor() = "
-                + theFirstBook.getAuthor().getName()
-                + " "
-                + theFirstBook.getAuthor().getSurname());
+//  Метод toString
+        System.out.println("theFirstBook.getAuthor() = " + theFirstBook.getAuthor());
         theFirstBook.setDateOfPublication(1969);
         System.out.println("theFirstBook.getDateOfPublication() = " +
                 theFirstBook.getDateOfPublication());
@@ -21,11 +22,19 @@ public class Main {
         Book theSecondBook = new Book("On the Origin of Species",
                 darwin, 1859);
         System.out.println("theSecondBook.getTitle() = " + theSecondBook.getTitle());
-        System.out.println("theSecondBook.getAuthor() = "
-                + theSecondBook.getAuthor().getName()
-                + " "
-                + theSecondBook.getAuthor().getSurname());
+// Метод toString
+        System.out.println("theSecondBook.getAuthor() = " + theSecondBook.getAuthor());
         System.out.println("theSecondBook.getDateOfPublication() = " +
                 theSecondBook.getDateOfPublication());
+        System.out.println();
+//
+// Метод toEquals
+        System.out.println(theSecondBook.equals(theSecondBook));
+        System.out.println(theFirstBook.equals(theSecondBook));
+        System.out.println();
+//
+// Метод hashCode
+        System.out.println(theFirstBook.hashCode());
+        System.out.println(theSecondBook.hashCode());
     }
 }
