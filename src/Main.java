@@ -5,7 +5,7 @@ public class Main {
         Author dick = new Author("Philip", "Dick");
         Author darwin = new Author("Philip", "Darwin");
         /* В 6й строке имя скопированно из 5й строки для проверки соответствия через
-         метода EQUALS.
+         метода EQUALS. 22я строка изменена по той же логике.
          */
 //
 // The First Book
@@ -19,7 +19,7 @@ public class Main {
         System.out.println();
 //
 // The Second Book
-        Book theSecondBook = new Book("On the Origin of Species",
+        Book theSecondBook = new Book("Ubik",
                 darwin, 1859);
         System.out.println("theSecondBook.getTitle() = " + theSecondBook.getTitle());
 // Метод toString
@@ -29,8 +29,8 @@ public class Main {
         System.out.println();
 //
 // Метод toEquals
-        System.out.println(theSecondBook.equals(theSecondBook));
         System.out.println(theFirstBook.equals(theSecondBook));
+        System.out.println(dick.equals(darwin));
         System.out.println();
 //
 // Метод hashCode
