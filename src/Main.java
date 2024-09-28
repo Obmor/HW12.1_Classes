@@ -19,7 +19,7 @@ public class Main {
         System.out.println();
 //
 // The Second Book
-        Book theSecondBook = new Book("Ubik",
+        Book theSecondBook = new Book("Ubik", // On the Origin of Species
                 darwin, 1859);
         System.out.println("theSecondBook.getTitle() = " + theSecondBook.getTitle());
 // Метод toString
